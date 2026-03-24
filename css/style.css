@@ -589,7 +589,7 @@ input.progress-input::-webkit-inner-spin-button {
 }
 .modal__body--three-col {
   display: grid;
-  grid-template-columns: 1.1fr 1.1fr .8fr;
+  grid-template-columns: 0.85fr 1.35fr 0.8fr;
   gap: 18px;
 }
 .detail-column {
