@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>프로젝트 대시보드</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body data-page="dashboard">
+  <div class="page-shell page-shell--wide">
+    <header class="dashboard-header">
+      <div>
+        <a href="index.html" class="button button--ghost button--inline">← 홈으로</a>
+        <div class="dashboard-title-wrap">
+          <div class="eyebrow">디자인기획팀 과업수행 현황 및 계획</div>
+          <h1 class="dashboard-title">2026년
+            <select id="month-select" class="inline-select"></select>
+            <select id="week-select" class="inline-select inline-select--small"></select>
+          </h1>
+        </div>
+      </div>
+
+      <div class="filters-card">
+        <div class="filter-row">
+          <label class="filter-control">
+            <span>셀</span>
+            <select id="filter-cell"></select>
+          </label>
+          <label class="filter-control">
+            <span>상태</span>
+            <select id="filter-status"></select>
+          </label>
+          <label class="filter-control">
+            <span>우선순위</span>
+            <select id="filter-priority"></select>
+          </label>
+          <label class="filter-control">
+            <span>PM</span>
+            <select id="filter-pm"></select>
+          </label>
+        </div>
+      </div>
+    </header>
+
+    <section class="list-header">
+      <h2>프로젝트 목록</h2>
+      <p>총 <strong id="project-count">0</strong>개</p>
+    </section>
+
+    <section id="projects-grid" class="project-grid"></section>
+    <div class="more-wrap hidden" id="more-wrap">
+      <button id="toggle-more" class="button button--ghost" type="button">더보기</button>
+    </div>
+  </div>
+
+  <div class="modal hidden" id="project-modal">
+    <div class="modal__backdrop" data-close-modal="true"></div>
+    <div class="modal__dialog modal__dialog--xl">
+      <div class="modal__header">
+        <div>
+          <div class="eyebrow">프로젝트 상세 정보</div>
+          <h3 id="modal-project-title">프로젝트</h3>
+        </div>
+        <button type="button" class="icon-button" data-close-modal="true">✕</button>
+      </div>
+
+      <div class="modal__body modal__body--three-col">
+        <section class="detail-column detail-column--muted">
+          <div class="detail-column__header">
+            <h4 id="previous-title">이전 주차</h4>
+            <span class="badge badge--neutral">Read-only</span>
+          </div>
+          <div id="previous-project-panel" class="detail-stack"></div>
+        </section>
+
+        <section class="detail-column">
+          <div class="detail-column__header">
+            <h4 id="current-title">이번 주차</h4>
+            <span class="badge badge--indigo">수정 가능</span>
+          </div>
+          <div id="current-project-panel" class="detail-stack"></div>
+        </section>
+
+        <aside class="detail-column detail-column--gradient">
+          <div class="detail-column__header detail-column__header--light">
+            <h4>AI 주간 변화 분석</h4>
+          </div>
+          <div id="insights-panel" class="insights-list"></div>
+        </aside>
+      </div>
+
+      <div class="modal__footer">
+        <button type="button" class="button button--ghost" data-close-modal="true">닫기</button>
+        <button type="button" class="button button--primary" id="save-project-btn">저장하기</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+  <script type="module" src="js/dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+[
+  {
+    "id": "sample-1",
+    "name": "[예시] 디자인기획팀 공통 운영 정리",
+    "cell": "공통",
+    "pm": "신혜영",
+    "priority": "중간",
+    "status": "진행 중",
+    "progress": 45,
+    "startDate": "2026-03-01",
+    "endDate": "2026-03-31",
+    "month": "3월",
+    "description": "공통 보고 체계와 주간 정리 포맷을 정리하는 예시 데이터입니다.",
+    "scope": "보고 체계 정리, 회의 아젠다 정리",
+    "members": [
+      {
+        "name": "신혜영",
+        "role": "PM"
+      }
+    ]
+  },
+  {
+    "id": "sample-2",
+    "name": "[예시] UX : 대시보드 화면 개선",
+    "cell": "UX",
+    "pm": "정은혜",
+    "priority": "높음",
+    "status": "진행 중",
+    "progress": 60,
+    "startDate": "2026-03-01",
+    "endDate": "2026-03-31",
+    "month": "3월",
+    "description": "대시보드 카드 구조 및 가독성 개선",
+    "scope": "메인 화면 개편 및 카드 구조 조정",
+    "ceoFeedback": "상단 KPI를 더 분명하게 보여주세요.",
+    "feedbackResponse": "이번 주 시안 수정안 반영 예정",
+    "url": "https://example.com",
+    "members": [
+      {
+        "name": "정은혜",
+        "role": "PM"
+      },
+      {
+        "name": "채선영",
+        "role": "UI 시안"
+      },
+      {
+        "name": "김수현",
+        "role": "컴포넌트 정리"
+      }
+    ]
+  },
+  {
+    "id": "sample-3",
+    "name": "[예시] 3D/영상 : 홍보 영상 콘셉트 테스트",
+    "cell": "3D/영상",
+    "pm": "김태식",
+    "priority": "중간",
+    "status": "지연됨",
+    "progress": 35,
+    "startDate": "2026-03-05",
+    "endDate": "2026-04-05",
+    "month": "3월",
+    "description": "항공뷰 기반 전후 비교 콘셉트 테스트",
+    "scope": "컷 구성 검토 및 표현 방식 테스트",
+    "members": [
+      {
+        "name": "김태식",
+        "role": "PM"
+      },
+      {
+        "name": "최영환",
+        "role": "시뮬레이션"
+      }
+    ]
+  },
+  {
+    "id": "sample-4",
+    "name": "[예시] 편집 : 보고서 요약본 제작",
+    "cell": "편집",
+    "pm": "마희연",
+    "priority": "낮음",
+    "status": "완료",
+    "progress": 100,
+    "startDate": "2026-03-01",
+    "endDate": "2026-03-15",
+    "month": "3월",
+    "description": "회의 자료용 요약 편집본 제작",
+    "scope": "요약 편집 및 검수",
+    "members": [
+      {
+        "name": "마희연",
+        "role": "PM"
+      },
+      {
+        "name": "최혜은",
+        "role": "검수"
+      }
+    ]
+  }
+]

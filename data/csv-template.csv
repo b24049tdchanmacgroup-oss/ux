@@ -1,0 +1,2 @@
+id,name,cell,pm,priority,status,progress,startDate,endDate,month,description,scope,members,ceoFeedback,feedbackResponse,collaborationTeam,seminarNotes,memberNotes,resourcePlan,docPlan,url
+1,UX : 대시보드 화면 개선,UX,정은혜,높음,진행 중,60,2026-03-01,2026-03-31,3월,대시보드 가독성 개선 및 구조 정리,메인 화면 개편 및 카드 구조 조정,"정은혜:PM, 채선영:UI 시안, 김수현:컴포넌트 정리",상단 KPI 배치를 더 명확하게,이번 주 시안 수정안 반영 예정,개발팀,주간 회의 예정,텍스트 우선 정리,UI 가이드 보완,문서 요약본 작성,https://example.com
