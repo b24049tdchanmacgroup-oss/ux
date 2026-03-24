@@ -507,7 +507,7 @@ input.progress-input {
   width: 58px;
   text-align: right;
   appearance: textfield;
-  font-size: 42px;
+  font-size: 32px;
   font-weight: 800;
   line-height: 1;
 }
