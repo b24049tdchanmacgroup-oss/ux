@@ -267,7 +267,7 @@ function renderReadonlyProject(project) {
         <div class="detail-item"><span class="detail-item__label">우선순위</span><div class="detail-value">${project.priority}</div></div>
       </div>
     </article>
-    <article class="detail-card readonly">
+    <article class="detail-card readonly detail-card--attachments">
       <h5>첨부문서 및 참고자료</h5>
       ${project.url ? `<a class="link-preview" href="${escapeHtml(project.url)}" target="_blank" rel="noreferrer">🔗 ${escapeHtml(project.url)}</a>` : `<div class="muted">등록된 링크가 없습니다.</div>`}
     </article>
@@ -313,8 +313,11 @@ function renderEditableProject(project) {
         <label class="detail-item"><span class="detail-item__label">종료일</span><input type="date" data-modal-field="endDate" value="${project.endDate}" /></label>
       </div>
     </article>
-    <article class="detail-card">
-      <h5>첨부문서 및 참고자료</h5>
+    <article class="detail-card detail-card--attachments">
+      <div style="display: flex; justify-content: space-between; align-items: center; gap: 8px; margin-bottom: 10px;">
+        <h5 style="margin: 0;">첨부문서 및 참고자료</h5>
+        <button type="button" class="icon-button" id="open-link-btn" title="링크 바로가기" style="padding: 0; width: 32px; height: 32px; font-size: 16px;" ${project.url ? '' : 'disabled'}>↗️</button>
+      </div>
       <input type="text" placeholder="https://" data-modal-field="url" value="${escapeHtml(project.url || '')}" />
     </article>
     <article class="detail-card">
@@ -374,6 +377,23 @@ function bindModalFormEvents() {
     row.querySelector('[data-member-field="role"]')?.addEventListener('input', event => {
       state.editingProject.members[index].role = event.target.value;
     });
+  });
+  
+  // 링크 바로가기 버튼 이벤트
+  qs('#open-link-btn')?.addEventListener('click', () => {
+    const url = qs('[data-modal-field="url"]')?.value;
+    if (url && url.trim()) {
+      window.open(url, '_blank', 'noopener,noreferrer');
+    }
+  });
+  
+  // URL 입력 필드 변경 시 버튼 상태 업데이트
+  const urlInput = qs('[data-modal-field="url"]');
+  urlInput?.addEventListener('input', () => {
+    const button = qs('#open-link-btn');
+    if (button) {
+      button.disabled = !urlInput.value.trim();
+    }
   });
 }
 

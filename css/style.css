@@ -571,6 +571,16 @@ input.progress-input::-webkit-inner-spin-button {
   height: 40px;
   border-radius: 999px;
   cursor: pointer;
+  transition: .2s ease;
+}
+.icon-button:hover:not(:disabled) {
+  background: #f0f4ff;
+  border-color: var(--indigo);
+  color: var(--indigo);
+}
+.icon-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 .modal__body {
   padding: 20px;
@@ -637,6 +647,10 @@ input.progress-input::-webkit-inner-spin-button {
 }
 .readonly {
   background: #f8fafc;
+}
+.detail-card--attachments {
+  max-height: 150px;
+  overflow-y: auto;
 }
 .members-editor {
   display: grid;
